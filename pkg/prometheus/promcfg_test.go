@@ -12548,9 +12548,8 @@ func TestPodMonitorSelectors(t *testing.T) {
 					Selector: metav1.LabelSelector{
 						MatchExpressions: []metav1.LabelSelectorRequirement{
 							{
-								Key:      "group",
-								Operator: metav1.LabelSelectorOpIn,
-								Values:   []string{"group1"},
+								Key:      "other-group",
+								Operator: metav1.LabelSelectorOpDoesNotExist,
 							},
 						},
 					},
